@@ -9,6 +9,9 @@
   "author": "rifan",
   "type": "commonjs",
   "main": "index.js",
+  "engines": {
+    "node": "18.x"
+  },
   "scripts": {
     "install": "npm install --prefix backend && npm install --prefix frontend",
     "postinstall": "npm run install",
