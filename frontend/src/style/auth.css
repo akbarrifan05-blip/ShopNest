@@ -1,0 +1,138 @@
+.auth-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 70vh;
+}
+
+.auth-form {
+  background: #18181b;
+  padding: 40px;
+  border-radius: 16px;
+  box-shadow: 0 10px 40px rgba(0,0,0,0.5);
+  width: 100%;
+  max-width: 420px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  position: relative;
+  overflow: hidden;
+}
+
+.auth-form::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -50%;
+  width: 200%;
+  height: 4px;
+  background: linear-gradient(90deg, transparent, #f97316, transparent);
+  animation: shimmer 3s infinite linear;
+}
+
+@keyframes shimmer {
+  0% { transform: translateX(-50%); }
+  100% { transform: translateX(50%); }
+}
+
+.auth-form h2 {
+  text-align: center;
+  font-size: 2rem;
+  color: #fff;
+  margin-bottom: 10px;
+}
+
+.auth-form input {
+  padding: 15px;
+  background: #09090b;
+  border: 1px solid #27272a;
+  border-radius: 8px;
+  font-size: 15px;
+  color: #fff;
+  outline: none;
+  transition: all 0.3s ease;
+}
+
+.password-field {
+  position: relative;
+}
+
+.password-field input {
+  width: 100%;
+  padding-right: 48px;
+  box-sizing: border-box;
+}
+
+.password-toggle {
+  position: absolute;
+  top: 50%;
+  right: 12px;
+  width: 32px;
+  height: 32px;
+  transform: translateY(-50%);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: 0;
+  background: transparent;
+  color: #a1a1aa;
+  cursor: pointer;
+  padding: 0;
+}
+
+.password-toggle:hover,
+.password-toggle:focus-visible {
+  color: #f97316;
+  outline: none;
+}
+
+.password-toggle svg {
+  width: 20px;
+  height: 20px;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 2;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.auth-form input:focus {
+  border-color: #f97316;
+  box-shadow: 0 0 0 2px rgba(249, 115, 22, 0.2);
+}
+
+.auth-form p {
+  text-align: center;
+  margin-top: 15px;
+  color: #a1a1aa;
+}
+
+.auth-message {
+  margin-top: 0;
+  line-height: 1.5;
+}
+
+.link-button {
+  border: 0;
+  background: transparent;
+  color: #f97316;
+  font-weight: 600;
+  cursor: pointer;
+  padding: 0;
+}
+
+.link-button:hover,
+.link-button:focus-visible {
+  text-decoration: underline;
+  outline: none;
+}
+
+.auth-form a {
+  color: #f97316;
+  font-weight: 600;
+}
+
+.auth-form a:hover {
+  text-decoration: underline;
+}
