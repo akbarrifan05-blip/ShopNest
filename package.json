@@ -9,17 +9,12 @@
   "author": "rifan",
   "type": "commonjs",
   "main": "index.js",
-  "engines": {
-    "node": "18.x"
-  },
   "scripts": {
-    "install": "npm install --prefix backend && npm install --prefix frontend",
-    "postinstall": "npm run install",
-    "dev:server": "npm --prefix backend run dev",
-    "dev:client": "npm --prefix frontend start",
+    "install": "cd backend && npm install && cd ../frontend && npm install",
+    "dev:server": "cd backend && npm run dev",
+    "dev:client": "cd frontend && npm start",
     "dev": "concurrently \"npm run dev:server\" \"npm run dev:client\"",
-    "build": "npm install --prefix frontend && npm run build --prefix frontend",
-    "start": "node backend/index.js"
+    "build": "cd frontend && npm run build"
   },
   "dependencies": {
     "concurrently": "^9.2.1"
