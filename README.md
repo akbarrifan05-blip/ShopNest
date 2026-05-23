@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # shopNest - ECOM MERN
 
 A full-stack MERN e-commerce application (ShopNest) with a Node/Express backend, MongoDB data store, and a React frontend. This README provides setup, environment variables, and running instructions to get the project running locally and for simple deployment.
@@ -141,3 +142,6 @@ Specify your license here (e.g. MIT) or remove this section as appropriate.
 
 ## Contact
 If you need help or want to report issues, open an issue in the repository or contact the maintainer.
+=======
+# ShopNest
+>>>>>>> 618b9540eec33ddb97ba067b716aa36258b0798e
