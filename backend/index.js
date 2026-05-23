@@ -4,6 +4,10 @@ const cors = require('cors');
 const connectDB = require('./config/db');
 const path = require('path');
 
+if (typeof global.crypto === 'undefined') {
+  global.crypto = require('crypto');
+}
+
 dotenv.config();
 connectDB();
 
