@@ -10,12 +10,13 @@
   "type": "commonjs",
   "main": "index.js",
   "scripts": {
-    "install": "cd backend && npm install && cd ../frontend && npm install",
-    "postinstall": "cd backend && npm install && cd ../frontend && npm install",
-    "dev:server": "cd backend && npm run dev",
-    "dev:client": "cd frontend && npm start",
+    "install": "npm install --prefix backend && npm install --prefix frontend",
+    "postinstall": "npm run install",
+    "dev:server": "npm --prefix backend run dev",
+    "dev:client": "npm --prefix frontend start",
     "dev": "concurrently \"npm run dev:server\" \"npm run dev:client\"",
-    "build": "cd frontend && npm run build"
+    "build": "npm install --prefix frontend && npm run build --prefix frontend",
+    "start": "node backend/index.js"
   },
   "dependencies": {
     "concurrently": "^9.2.1"
